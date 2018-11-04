@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Campaign Name Checker</h3>
+
+<input type="text" id="myText" value="Please enter Campaign Name">
+
+<p>Click the "Try it" button to get the text in the text field.</p>
+
+<button onclick="myFunction()">Check it!</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = x;
+    
+    var n = x.includes(" ");
+    document.getElementById("demo").innerHTML = n;
+}
+
+
+
+
+</script>
+
+</body>
+</html>

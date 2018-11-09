@@ -1,0 +1,52 @@
+<h3 style="font-family: Onyx;"><big><big><big><big>Campaign Name Checker</big></big></big></big></h3>
+
+<big><big><big><input size="111" name="Giris" id="myText" value="Please enter Campaign Name Here to check if campaign name includes space(s) or dash(s)"></big></big></big><br>&nbsp;<br>
+<p>Example: Ingles_Markets_SRP89000_OTT_V2_Video</p>
+<big style="font-family: monospace;"><button onclick="myFunction()">Check it!</button></big>
+
+
+<p id="demo"></p>
+
+<script>
+
+
+function myFunction() {
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = x;
+//for space
+    var n = x.includes(" ");
+    document.getElementById("demo").innerHTML = n;
+//for dash
+    var d = x.includes("-");
+    document.getElementById("demo").innerHTML = d;
+
+
+
+    if (d==true && n==true) {
+      document.getElementById("demo").innerHTML = 'MISTAKE!!! CAMPAIGN NAME INCLUDES SPACE & DASH!!!';
+      document.body.style.backgroundColor = "#AA0000";
+    }
+
+    else if (n==true) {
+      document.getElementById("demo").innerHTML = 'MISTAKE!!! CAMPAIGN NAME INCLUDES SPACE!!!';
+      document.body.style.backgroundColor = "#AA0000";
+}
+      else if (d==true) {
+        document.getElementById("demo").innerHTML = 'MISTAKE!!! CAMPAIGN NAME INCLUDES DASH!!!';
+        document.body.style.backgroundColor = "#AA0000";
+      }
+
+
+
+    else {
+      document.getElementById("demo").innerHTML = 'GOOD TO GO!';
+      document.body.style.backgroundColor = "#008000";
+
+    }
+}
+
+
+//emirwashere
+
+
+</script>
